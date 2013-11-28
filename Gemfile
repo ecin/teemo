@@ -1,7 +1,10 @@
 source "https://rubygems.org"
 
 gem "rails", "~> 4.0.1"
-gem "postgres", "~> 0.8.1"
+gem "pg", "~> 0.17.0"
+
+# Use MiniTest for testing
+gem "minitest-rails", "~> 0.9.2"
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
