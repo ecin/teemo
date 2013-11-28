@@ -1,0 +1,9 @@
+Babushka installs our application dependencies. To run, first install Babushka:
+
+$ sh -c "`curl https://babushka.me/up/v0.17.5`"
+
+Then run from within the repo:
+
+$ babushka install
+
+More information at http://babushka.me
