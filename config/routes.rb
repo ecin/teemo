@@ -53,6 +53,8 @@ Teemo::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  get "/activities/search/:query" => "activities#search"
   resources :activities
 
   resources :users do

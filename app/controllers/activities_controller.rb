@@ -5,10 +5,16 @@ class ActivitiesController < ApplicationController
     user_id = params[:user_id]
 
     if user = User.where(:id => user_id).first
-      render :json => user.activities
+      render :json => user.activities, root: false
     else
-      render :json => Activity.all
+      render json: Activity.all, root: false
     end
+  end
+
+  def search
+    query = params[:query]
+
+    render json: Activity.fuzzy_search(query), root: false
   end
 
 end
