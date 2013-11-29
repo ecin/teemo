@@ -1,0 +1,6 @@
+List of next things to do:
+
+* allow activity creation (how to manage mispellings?)
+* refactor serializers
+* add session management
+* fetch friends from Facebook
