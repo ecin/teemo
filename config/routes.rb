@@ -53,4 +53,10 @@ Teemo::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  resources :activities
+
+  resources :users do
+    resources :activities
+    resources :allies
+  end
 end
