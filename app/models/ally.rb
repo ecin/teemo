@@ -10,4 +10,10 @@ class Ally < ActiveRecord::Base
   alias_method :who, :user
 
   def_delegators :who, :email, :name
+
+  class Serializer < ActiveModel::Serializer
+    root false
+    has_one :activity
+    has_one :who
+  end
 end

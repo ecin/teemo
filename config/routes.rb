@@ -58,7 +58,9 @@ Teemo::Application.routes.draw do
   resources :activities
 
   resources :users do
-    resources :activities
+    resources :activities do
+      resources :allies
+    end
     resources :allies
   end
 end
