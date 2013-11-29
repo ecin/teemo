@@ -13,6 +13,6 @@ class Activity < ActiveRecord::Base
 
   class Serializer < ActiveModel::Serializer
     root false
-    attributes :name
+    attributes :id, :name
   end
 end
