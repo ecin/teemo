@@ -8,8 +8,9 @@ class AlliesController < ApplicationController
     user = User.where(:id => user_id).first
     activity = Activity.where(:id => activity_id).first
     allies = user.try(:allies).where(activity_id: activity.try(:id))
+    allies.map!(&:who)
 
-    render json: allies, each_serializer: Ally::Serializer, root: false
+    render json: allies, each_serializer: User::Serializer, root: false
   end
 
 end

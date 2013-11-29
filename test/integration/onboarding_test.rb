@@ -44,7 +44,7 @@ class OnboardingTest < ActionDispatch::IntegrationTest
     get "/users/#{user.id}/activities/#{activity.id}/allies", {}, "Accept" => "application/json"
 
     result.wont_be_nil
-    result.first["who"]["name"].must_equal users(:george).name
+    result.first["name"].must_equal users(:george).name
   end
 
   test "search for activities" do
